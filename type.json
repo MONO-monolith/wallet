@@ -1,0 +1,98 @@
+{
+  "TokenId": "u32",
+  "RawAmount": "u128",
+  "HashAlgorithm": {
+    "_enum": [
+      "MD5",
+      "SHA1",
+      "SHA2_224",
+      "SHA2_256",
+      "SHA2_384",
+      "SHA2_512",
+      "SHA512_224",
+      "SHA512_256",
+      "SHA3_224",
+      "SHA3_256",
+      "SHA3_384",
+      "SHA3_512",
+      "BLAKE2b_256",
+      "BLAKE2b_384",
+      "BLAKE2b_512",
+      "Keccak_256",
+      "Keccak_512"
+    ]
+  },
+  "BonusDestination": {
+    "_enum": {
+      "Participant": "Null",
+      "Other": "AccountId"
+    }
+  },
+  "BasicToken": {
+    "id": "TokenId",
+    "symbol": "Text",
+    "name": "Text",
+    "total_supply": "u128",
+    "decimals": "u8",
+    "owner": "AccountId",
+    "pending_owner": "Option<AccountId>",
+    "mintable": "bool",
+    "transferable": "bool",
+    "burnable": "bool"
+  },
+  "ClassicRule": {
+    "first_mine_at": "u32",
+    "frequency": "u32",
+    "gross_reserves": "u128",
+    "halve_period": "u32",
+    "initial_quantity": "u128",
+    "initial_halve_period": "u32"
+  },
+  "MineInfo": {
+    "times": "u32",
+    "yielded": "u128",
+    "quantity": "u128",
+    "next_halve_time": "u32",
+    "rule": "ClassicRule"
+  },
+  "StakingRule": {
+    "bonus_token_id": "TokenId",
+    "min_stake_amount": "u128",
+    "unstake_delay": "u32"
+  },
+  "StakingInfo": {
+    "open_season_until": "u32",
+    "rich_man": "AccountId",
+    "last_bonus_seq": "u32",
+    "rule": "StakingRule"
+  },
+  "AccountContributions": {
+    "who": "AccountId",
+    "value": "u128"
+  },
+  "AccountBalance": {
+    "free": "u128",
+    "reserved": "u128"
+  },
+  "StakingLedger": {
+    "payee": "BonusDestination",
+    "active": "u128",
+    "unstaking": "u128"
+  },
+  "PocInfo": {
+    "depositor":"AccountId",
+    "deposit": "u128",
+    "operator": "AccountId",
+    "last_mined_seq": "u32"
+  },
+  "WithdrawnChunk": {
+    "token_id": "u32",
+    "min_stake_amount": "u128",
+    "withdrawn_delay": "u32"
+  },
+  "BonusSeq": "u32",
+  "MinedSeq": "u32",
+  "Contribution": "u128",
+  "Address": "AccountId",
+  "WeightToFeeCoefficient": "u128"
+}
