@@ -1,6 +1,6 @@
 {
-  "changelog": "v1.4.1\n1、Tokens Staking功能上线。\n2、部分功能优化。",
-  "build": 19,
-  "version": "1.4.1",
+  "changelog": "v1.4.3\n优化加载速度",
+  "build": 21,
+  "version": "1.4.3",
   "url": "https://www.monolithchain.io/download/"
 }

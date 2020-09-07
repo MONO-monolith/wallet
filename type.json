@@ -84,6 +84,17 @@
     "active": "Compact<u128>",
     "withdrawing": "Compact<u128>"
   },
+  "PocInfo": {
+    "depositor": "AccountId",
+    "deposit": "u128",
+    "operator": "AccountId",
+    "lastMinedSeq": "u32"
+  },
+  "WithdrawnChunk": {
+    "tokenId": "TokenId",
+    "participant": "AccountId",
+    "value": "Compact<u128>"
+  },
   "BonusSeq": "u32",
   "MinedSeq": "u32",
   "Contribution": "u128",
